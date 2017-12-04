@@ -1368,8 +1368,13 @@
 				editor.html(html);
 			}
 
-			zss_editor.setTitleHTML = function(html) {
-				setHTML('zss_editor_title', html);
+			function setText(editorId, text) {
+				var editor = $('#' + editorId);
+				editor.text(text);
+			}
+
+			zss_editor.setTitleHTML = function(text) {
+				setText('zss_editor_title', text);
 			}
 
 			zss_editor.toggleTitle = function() {
