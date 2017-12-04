@@ -1442,7 +1442,7 @@
 			}
 
 			zss_editor.getTitleHTML = function() {
-				return getHtml("zss_editor_title");
+				return $('<div />').html(getHtml("zss_editor_title")).text();
 			}
 
 			zss_editor.getContentHTML = function() {
