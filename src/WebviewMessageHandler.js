@@ -1,4 +1,4 @@
-import {actions, messages} from './const';
+import { actions, messages } from './const';
 
 export const InjectedMessageHandler = `
   if (WebViewBridge) {
@@ -90,6 +90,9 @@ export const InjectedMessageHandler = `
           break;
         case '${actions.insertImage}':
           zss_editor.insertImage(action.data);
+          break;
+        case '${actions.insertEmbed}':
+          zss_editor.insertEmbed(action.data);
           break;
         case '${actions.setSubscript}':
           zss_editor.setSubscript();

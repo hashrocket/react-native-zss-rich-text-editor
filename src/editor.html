@@ -1356,6 +1356,14 @@
 				zss_editor.enabledEditingItems();
 			}
 
+			zss_editor.insertEmbed = function(embed) {
+				zss_editor.restorerange();
+				var embedContainer = $('<div class="embed-container" />');
+				embedContainer.html(embed);
+				zss_editor.insertHTML('<br>' + embedContainer.html() + '<br>');
+				zss_editor.enabledEditingItems();
+			}
+
 			zss_editor.insertImageBase64String = function(imageBase64String, alt) {
 				zss_editor.restorerange();
 				var html = '<img src="data:image/jpeg;base64,'+encodeHtmlEntities(imageBase64String)+'" alt="'+encodeHtmlEntities(alt)+'" />';

@@ -34,6 +34,7 @@ export const actions = {
   insertLink: 'INST_LINK',
   updateLink: 'UPDATE_LINK',
   insertImage: 'INST_IMAGE',
+  insertEmbed: 'INST_EMBED',
   setSubscript: 'subscript',
   setSuperscript: 'superscript',
   setStrikethrough: 'strikeThrough',
@@ -52,9 +53,8 @@ export const actions = {
   init: 'ZSSS_INIT',
   setEditorHeight: 'SET_EDITOR_HEIGHT',
   setFooterHeight: 'SET_FOOTER_HEIGHT',
-  setPlatform: 'SET_PLATFORM'
+  setPlatform: 'SET_PLATFORM',
 };
-
 
 export const messages = {
   TITLE_HTML_RESPONSE: 'TITLE_HTML_RESPONSE',
@@ -69,5 +69,5 @@ export const messages = {
   CONTENT_CHANGE: 'CONTENT_CHANGE',
   SELECTED_TEXT_RESPONSE: 'SELECTED_TEXT_RESPONSE',
   LINK_TOUCHED: 'LINK_TOUCHED',
-  SELECTED_TEXT_CHANGED: 'SELECTED_TEXT_CHANGED'
+  SELECTED_TEXT_CHANGED: 'SELECTED_TEXT_CHANGED',
 };
