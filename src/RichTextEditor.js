@@ -515,7 +515,6 @@ export default class RichTextEditor extends Component {
 
   insertEmbed(html) {
     this._sendAction(actions.insertEmbed, html);
-    this.prepareInsert(); //This must be called BEFORE insertImage. But WebViewBridge uses a stack :/
   }
 
   setSubscript() {
