@@ -886,7 +886,6 @@
 				clearHtmlIfTextIsEmpty('zss_editor_content');
 
 				$(document).on('selectionchange',function(e){
-					console.log('selectionchange');
 					zss_editor.calculateEditorHeightWithCaretPosition();
 					zss_editor.setScrollPosition();
 					zss_editor.enabledEditingItems(e);
@@ -1162,9 +1161,6 @@
 
 				zss_editor.enabledEditingItems();
 			}
-
-			// Need way to remove formatBlock
-			console.log('WARNING: We need a way to remove formatBlock items');
 
 			zss_editor.undo = function() {
 				document.execCommand('undo', false, null);
@@ -1478,7 +1474,6 @@
 
 			zss_editor.enabledEditingItems = function(e) {
 
-				console.log('enabledEditingItems');
 				var items = [];
 				if (zss_editor.isCommandEnabled('bold')) {
 					items.push('bold');
