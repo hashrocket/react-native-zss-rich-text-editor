@@ -157,6 +157,11 @@ export default class RichTextEditor extends Component {
           }
           break;
         case messages.ZSS_INITIALIZED:
+          if (this.initialized) {
+            break;
+          }
+          this.initialized = true;
+
           if (this.props.customCSS) {
             this.setCustomCSS(this.props.customCSS);
           }
