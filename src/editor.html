@@ -1354,11 +1354,8 @@
 
 			 zss_editor.insertEmbed = function(embed) {
 				zss_editor.restorerange();
-
-				var html = '<br /><div>&nbsp;</div><div id="embed-container">&nbsp;</div><br />';
-				zss_editor.insertHTML(html);
-				$("#embed-container").replaceWith($(embed));
-
+				var iframeContainer = $('<div>' + embed + '</div>');
+				zss_editor.insertHTML('<br>' + iframeContainer.html() + '<br>');
 				zss_editor.enabledEditingItems();
 			}
 
